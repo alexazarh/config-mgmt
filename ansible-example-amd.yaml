@@ -10,3 +10,37 @@
     command: ls ~/
     register: out
   - debug: var=out.stdout_lines
+
+# - name: "edit line"
+#   lineinfile:
+#   path: / etc / sysconfig / network
+#   regexp: '^NISDOMAIN'
+#   line: 'NISDOMAIN=SGPAZPEO'
+# - name: "Edit the passwd entry in /etc/nsswitch.conf"
+#   lineinfile:
+#   path: / etc / nsswitch.conf
+#   regexp: '^passwd'
+#   line: 'passwd:     files nis'
+#   - name: "Edit the shadow entry in /etc/nsswitch.conf"
+#   lineinfile:
+#   path: / etc / nsswitch.conf
+#   regexp: '^shadow'
+#   line: 'shadow:     files nis'
+# - name: "Edit the group entry in /etc/nsswitch.conf"
+#   lineinfile:
+#   path: / etc / nsswitch.conf
+#   regexp: '^group'
+#   line: 'group:     files nis'
+# - name: "Edit the automount entry in /etc/nsswitch.conf"
+#   lineinfile:
+#   path: / etc / nsswitch.conf
+#   regexp: '^automount'
+#   line: 'automount:     files nis'
+# - name: "copy yp.conf file"
+#   copy:
+#   src: / root / ansible - scripts / files / yp.conf
+#   dest: / etc / yp.conf
+#   force: yes
+#   owner: root
+#   group: root
+#   mode: 0644
