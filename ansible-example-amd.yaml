@@ -1,0 +1,12 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+  - name: Ansible create file if it doesn't exist example
+    file:
+      path: "~/some-file.txt"
+      state: touch
+  - name: Run ls.sh and output "ls ~/"
+    command: ls ~/
+    register: out
+  - debug: var=out.stdout_lines
