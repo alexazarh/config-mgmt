@@ -1,0 +1,6 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+      - name: install httpd*
+        yum: name=httpd state=latest
