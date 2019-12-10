@@ -3,4 +3,6 @@
   gather_facts: no
   tasks:
       - name: install httpd*
+        become: yes
+        become_user: root
         yum: name=httpd state=latest
